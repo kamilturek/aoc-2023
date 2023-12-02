@@ -1,4 +1,4 @@
-# Advent of Code 2022
+# Advent of Code 2023
 
 ## Python
 
@@ -6,9 +6,6 @@
 
 ```bash
 cd day01
-```
-
-```bash
 python -m doctest part1.py
 ```
 
@@ -16,8 +13,5 @@ python -m doctest part1.py
 
 ```bash
 cd day01
-```
-
-```bash
-cat input1.txt | python part1.py
+python part1.py < input1.txtx
 ```
