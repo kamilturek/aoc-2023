@@ -28,7 +28,6 @@ def solve(input):
         cube_sets = cube_sets.split(";")
 
         for cube_set in cube_sets:
-            cube_set = cube_set.strip()
             for count, color in re.findall("(\d+) (\w+)", cube_set):
                 game_maxes[color] = max(game_maxes[color], int(count))
 
