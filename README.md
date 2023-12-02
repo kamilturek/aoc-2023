@@ -13,5 +13,5 @@ python -m doctest part1.py
 
 ```bash
 cd day01
-python part1.py < input1.txtx
+python part1.py < input1.txt
 ```
