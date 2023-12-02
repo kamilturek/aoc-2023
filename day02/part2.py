@@ -20,7 +20,7 @@ def solve(input):
             "blue": 0,
         }
 
-        _, cube_sets = re.match(r"Game (\d+): (.*)", game).groups()
+        cube_sets = re.match(r"Game \d+: (.*)", game).group(0)
         cube_sets = cube_sets.split(";")
 
         for cube_set in cube_sets:
