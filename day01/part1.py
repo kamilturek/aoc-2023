@@ -1,6 +1,14 @@
 import re
 import sys
 
+PATTERN = re.compile(r"(1|2|3|4|5|6|7|8|9)")
+
+
+def get_first_and_last(line):
+    found = PATTERN.findall(line)
+    first, last = found[0], found[-1]
+    return int(f"{first}{last}")
+
 
 def solve(input):
     """
@@ -9,15 +17,7 @@ def solve(input):
     >>> solve(open('input2.txt'))
     56108
     """
-    total = 0
-    pattern = re.compile(r"(1|2|3|4|5|6|7|8|9)")
-
-    for line in input:
-        found = pattern.findall(line)
-        first, last = found[0], found[-1]
-        total += int(f"{first}{last}")
-
-    return total
+    return sum(get_first_and_last(line) for line in input)
 
 
 if __name__ == "__main__":
